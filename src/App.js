@@ -37,13 +37,7 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet 
-      name="Thoughts of Dog®" 
-      image="https://i.imgur.com/b0EdHVV.jpg"
-      handle="dog_feelings"
-      timestamp="3h ago"
-    message="here is what. i plan to accomplish today:  bark loudly. but at nothing lose my ball under the couch politely ask the human. to get my ball immediately lose it again. under the same couch big nap. you have worked hard repeat"
-      />
+      <Tweet tweet={tweetsArray[0]} />
     </div>
   );
 }

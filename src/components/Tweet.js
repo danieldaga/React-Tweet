@@ -1,8 +1,8 @@
-function Tweet({name, image, handle, timestamp, message}) {
+function Tweet(props) {
   return (
     <div className="tweet">
       <img
-        src={image}
+        src={props.tweet.user.image}
         className="profile"
         alt="profile"
       />
@@ -10,15 +10,15 @@ function Tweet({name, image, handle, timestamp, message}) {
       <div className="body">
         <div className="top">
           <span className="user">
-            <span className="name">{name}</span>
-            <span className="handle">@{handle}</span>
+            <span className="name">{props.tweet.user.name}</span>
+            <span className="handle">@{props.tweet.user.handle}</span>
           </span>
 
-          <span className="timestamp">{timestamp}</span>
+          <span className="timestamp">{props.tweet.timestamp}</span>
         </div>
 
         <p className="message">
-          {message}
+          {props.tweet.message}
         </p>
 
         <div className="actions">
